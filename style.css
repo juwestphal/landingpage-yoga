@@ -1,97 +1,159 @@
 /* RESPONSIVE */
 @media (max-width: 768px) {
 
-    /* Reorganiza os elementos em coluna e centraliza */
-    .navbar,
-    .hero-section,
-    .services-container,
-    .paragraph-and-button,
-    .contact-container,
-    .team-cards,
-    .stats-section,
-    .card-wrapper {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  /* Reorganiza os elementos em coluna e centraliza */
+  .navbar,
+  .hero-section,
+  .services-container,
+  .paragraph-and-button,
+  .contact-container,
+  .team-cards,
+  .stats-section,
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    /* Navbar: itens em coluna e alinhados à esquerda */
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
+  /* ===== NAVBAR ===== */
+  /* Centraliza tudo e deixa o Contact com o mesmo alinhamento dos demais */
+  .navbar {
+    flex-direction: column;
+    align-items: center;        /* antes: flex-start */
+    gap: 10px;
+  }
 
-    .nav-list {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 0;
-    }
+  .nav-list {
+    flex-direction: column;
+    align-items: center;        /* antes: flex-start */
+    gap: 10px;
+    padding: 0;
+  }
 
-    .contact-btn {
-        align-self: flex-start;
-    }
+  .contact-btn {
+    align-self: center;         /* antes: flex-start */
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-align: center;
+    width: 100%;
+    max-width: 320px;
+  }
 
-    /* Imagem do hero responsiva */
-    .hero-section img {
-        width: 100%;
-        height: auto;
-    }
+  /* ===== HERO ===== */
+  .hero-section img {
+    width: 100%;
+    height: auto;
+  }
 
-    .hero-section {
-        gap: 20px;
-        padding: 2rem 1rem;
-    }
+  .hero-section {
+    gap: 20px;
+    padding: 2rem 1rem;
+  }
 
-    .hero-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
 
-    /* Formulário de contato responsivo */
-    .contact-form {
-        padding: 30px;
-        margin-top: 40px;
-        width: 100%;
-        box-sizing: border-box;
-    }
+  /* ===== CONTACT ===== */
+  .contact-section {
+    justify-content: center;    /* antes: flex-start */
+  }
 
-    .card-price,
-    .card,
-    .card-second {
-        width: 90%;
-        max-width: 100%;
-    }
+  .contact-container {
+    width: 100%;
+    padding: 0 16px;
+  }
 
-    .contact-text {
-        text-align: center;
-        width: 100%;
-    }
+  /* Formulário de contato responsivo */
+  .contact-form {
+    padding: 30px;
+    margin-top: 40px;           /* se quiser menos espaço: 24px */
+    width: 100%;
+    box-sizing: border-box;
+  }
 
-    /* Modal centralizado e responsivo */
-    .modal {
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
+  .contact-text {
+    text-align: center;
+    width: 100%;
+  }
 
-    .login-modal {
-        width: 90%;
-        padding: 30px;
-    }
+  /* Cards e preços */
+  .card-price,
+  .card,
+  .card-second {
+    width: 90%;
+    max-width: 100%;
+  }
 
-    .input {
-        width: 100%;
-        box-sizing: border-box;
-    }
+  /* ===== STATS ===== */
+  .stats-section {
+    padding: 24px 16px;         /* menos padding no mobile */
+    margin: 16px auto;
+    max-width: 100%;
+    width: 100%;
+    gap: 12px;
+    align-items: stretch;       /* cada box ocupa toda a largura */
+  }
 
-    .login-modal button {
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: 20px;
-    }
+  .stat-box {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-box h3 {
+    font-size: 28px;
+    margin: 0 0 6px 0;
+  }
+
+  .stat-box p {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .stat-text {
+    order: 99;                  /* texto explicativo por último */
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
+    padding: 0 4px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ===== MODAL ===== */
+  .modal {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .login-modal {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .input,
+  .login-modal button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .login-modal button {
+    margin-top: 20px;
+  }
+
+  /* Outros ajustes menores */
+  .paragraph-and-button {
+    gap: 16px;
+  }
 }
+
 
 
 * {
